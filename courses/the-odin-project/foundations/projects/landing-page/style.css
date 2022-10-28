@@ -26,15 +26,6 @@ a {
     margin: auto;
 }
 
-.flex {
-    display: flex;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Navbar */
 .navbar {
     background-color: #1F2937;
@@ -73,9 +64,9 @@ a {
     justify-content: space-between;
     align-items: center;
     color: #f9faf8;
-    height: 300px;
+    height: 400px;
     gap: 32px;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .header .left,
@@ -183,7 +174,7 @@ a {
 
 /* Blue box section */
 .blue-box {
-    padding: 100px 0;
+    padding: 70px 0;
     display: flex;
 }
 
