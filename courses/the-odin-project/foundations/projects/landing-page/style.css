@@ -28,14 +28,19 @@ a {
 
 /* Navbar */
 .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #1F2937;
 }
 
 .navbar .container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     color: whitesmoke;
-    padding: 12px 0 0 0;
+    margin: 12px 12px;
+    flex: 1 1 100px;
 }
 
 .navbar h1 {
@@ -53,10 +58,17 @@ a {
     color: #f9faf8;
 }
 
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header */
 .header {
     background-color: #1F2937;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -64,9 +76,9 @@ a {
     justify-content: space-between;
     align-items: center;
     color: #f9faf8;
-    height: 400px;
     gap: 32px;
-    padding: 100px 0;
+    margin: 100px 20px;
+    flex: 1 1 300px;
 }
 
 .header .left,
@@ -104,16 +116,25 @@ a {
     justify-content: center;
     align-items: center;
     background-color: grey;
-    height: 100%;
+    align-self: stretch;
+    text-align: center;
+    padding: 20px 20px;
 }
 
 /* Cards section*/
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .cards .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
+    margin: 0 20px;
 }
 
 .cards h1 {
@@ -123,6 +144,7 @@ a {
 .cards .card-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -145,15 +167,14 @@ a {
 
 .quote {
     background-color: #e5e7eb;
-    height: 300px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .quote .container {
+    flex: 1 1 300px;
     display: block;
     padding: 50px 100px;
     color: #1F2937;
@@ -179,14 +200,13 @@ a {
 }
 
 .blue-box .container {
-
-    height: 100px;
     border-radius: 5px;
     background-color: #3882f6;
     justify-content: space-between;
     align-items: center;
     color: #f9faf8;
     padding: 30px 100px;
+    flex: 1 1 100px;
 }
 
 .blue-box button {
