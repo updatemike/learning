@@ -91,6 +91,11 @@ for (let t of toDo) {
 }
 
 /* Function -  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions*/
+function addNumbers(num1, num2) {
+    return num1 + num2;
+};
+const addNumbersAnswer = addNumbers(5, 5);
+/* console.log(addNumbersAnswer) */
 
 /* High order array methods */
 /* forEach - loop through */
@@ -114,3 +119,77 @@ const toDoCombined = toDo.filter(function (t) {
     return t.text;
 });
 /* console.log(toDoCombined) */
+
+/* Conditionals */
+const oneConditional = 10;
+/* == compares value, === compares value and datatype */
+if (oneConditional == 10) {
+    /* console.log("x is 10 regardless of data type") */
+} else if (oneConditional === 10) {
+    /* console.log("x is 10 and is datatype number") */
+} else {
+    /* console.log("x is NOT 10") */
+};
+/* OR -> ||, AND -> && */
+/* Ternary operator -> variable = condition ? value if true : value if false */
+const ternaryConditional = x > 10 ? "red" : "blue";
+/* switch */
+switch (ternaryConditional) {
+    case "red":
+        /* console.log("color is red"); */
+        break;
+    case "blue":
+        /* console.log("color is blue"); */
+        break;
+    default:
+        /* console.log("color is NOT red or blue") */
+        break;
+}
+/* console.log(ternaryConditional) */
+
+/* arrow functions */
+/* function addNumbers(num1, num2) {
+    return num1 + num2;
+}; */
+const addNumbersArrow = (num1, num2) => num1 + num2;
+/* console.log(addNumbersArrow(5, 5)) */
+
+
+/* OBJECT ORIENTED PROGRAMMING */
+/* Constructor function */
+function Car(name, brand, color, manufacturedDate) {
+    this.name = name;
+    this.brand = brand;
+    this.color = color;
+    this.manufacturedDate = new Date(manufacturedDate);
+    /* this.getNameAndBrand = () => `${this.name} ${this.brand}` */ /* This shows on the object itself so it's best to move to object prototype like shown below */
+}
+Car.prototype.getNameAndBrand = function () {
+    return `${this.name}  ${this.brand}`
+}
+
+/* Instantiate object */
+const car1 = new Car("Mike", "volvo", "black", "12/20/1989");
+
+/* console.log(car1.getNameAndBrand()); */
+
+/* Classes */
+class Dog {
+    constructor(dogFirstName, dogLastName, dogDateOfBirth) {
+        this.dogFirstName = dogFirstName;
+        this.dogLastName = dogLastName;
+        this.dogDateOfBirth = new Date(dogDateOfBirth);
+    }
+
+    getDogBirthYear() {
+        return this.dogDateOfBirth.getFullYear();
+    }
+
+    getDogFullName() {
+        return `${this.dogFirstName} ${this.dogLastName}`
+    }
+}
+const sombra = new Dog("Sombra", "Cadela", "12/20/1989")
+/* console.log(sombra)
+console.log(sombra.getDogFullName()) */
+
