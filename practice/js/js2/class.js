@@ -50,7 +50,7 @@ val = s.split('');
 
 
 // ARRAYS - Store multiple values in a variable
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 const fruits = ['apples', 'oranges', 'pears', 'grapes'];
 console.log(numbers, fruit);
 
@@ -60,7 +60,7 @@ console.log(fruits[1]);
 // Add value
 fruits[4] = 'blueberries';
 
-// Add value using push()
+// Add value at end using push()
 fruits.push('strawberries');
 
 // Add to beginning
@@ -68,6 +68,12 @@ fruits.unshift('mangos');
 
 // Remove last value
 fruits.pop();
+
+// Splice - splice(start, deleteCount, item1,item2, itemN)
+fruits.splice(1, 0 `pineapple`); // add pineapple to position 1 without deleting any items in the array
+
+// Sort array alphabetically
+fruits.sort();
 
 // // Check if array
 console.log(Array.isArray(fruits));
@@ -130,25 +136,25 @@ console.log(JSON.stringify(todos));
 // LOOPS
 
 // For
-for(let i = 0; i <= 10; i++){
+for (let i = 0; i <= 10; i++) {
   console.log(`For Loop Number: ${i}`);
 }
 
 // While
 let i = 0
-while(i <= 10) {
+while (i <= 10) {
   console.log(`While Loop Number: ${i}`);
   i++;
 }
 
 // Loop Through Arrays
 // For Loop
-for(let i = 0; i < todos.length; i++){
+for (let i = 0; i < todos.length; i++) {
   console.log(` Todo ${i + 1}: ${todos[i].text}`);
 }
 
 // For...of Loop
-for(let todo of todos) {
+for (let todo of todos) {
   console.log(todo.text);
 }
 
@@ -156,22 +162,22 @@ for(let todo of todos) {
 // HIGH ORDER ARRAY METHODS (show prototype)
 
 // forEach() - Loops through array
-todos.forEach(function(todo, i, myTodos) {
+todos.forEach(function (todo, i, myTodos) {
   console.log(`${i + 1}: ${todo.text}`);
   console.log(myTodos);
 });
 
 // map() - Loop through and create new array
-const todoTextArray = todos.map(function(todo) {
+const todoTextArray = todos.map(function (todo) {
   return todo.text;
 });
 
 console.log(todoTextArray);
 
 // filter() - Returns array based on condition
-const todo1 = todos.filter(function(todo) {
+const todo1 = todos.filter(function (todo) {
   // Return only todos where id is 1
-  return todo.id === 1; 
+  return todo.id === 1;
 });
 
 
@@ -180,9 +186,9 @@ const todo1 = todos.filter(function(todo) {
 // Simple If/Else Statement
 const x = 30;
 
-if(x === 10) {
+if (x === 10) {
   console.log('x is 10');
-} else if(x > 10) {
+} else if (x > 10) {
   console.log('x is greater than 10');
 } else {
   console.log('x is less than 10')
@@ -191,12 +197,12 @@ if(x === 10) {
 // Switch
 color = 'blue';
 
-switch(color) {
+switch (color) {
   case 'red':
     console.log('color is red');
   case 'blue':
     console.log('color is blue');
-  default:  
+  default:
     console.log('color is not red or blue')
 }
 
@@ -207,7 +213,7 @@ const z = color === 'red' ? 10 : 20;
 
 // FUNCTIONS
 function greet(greeting = 'Hello', name) {
-  if(!name) {
+  if (!name) {
     // console.log(greeting);
     return greeting;
   } else {
@@ -230,12 +236,12 @@ function Person(firstName, lastName, dob) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.dob = new Date(dob); // Set to actual date object using Date constructor
-  // this.getBirthYear = function(){
-  //   return this.dob.getFullYear();
-  // }
-  // this.getFullName = function() {
-  //   return `${this.firstName} ${this.lastName}`
-  // }
+  /*  this.getBirthYear = function(){
+     return this.dob.getFullYear();
+   }
+   this.getFullName = function() {
+     return `${this.firstName} ${this.lastName}`
+   } */
 }
 
 // Get Birth Year
@@ -244,7 +250,7 @@ Person.prototype.getBirthYear = function () {
 }
 
 // Get Full Name
-Person.prototype.getFullName = function() {
+Person.prototype.getFullName = function () {
   return `${this.firstName} ${this.lastName}`
 }
 
@@ -348,8 +354,8 @@ myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  
-  if(nameInput.value === '' || emailInput.value === '') {
+
+  if (nameInput.value === '' || emailInput.value === '') {
     // alert('Please enter all fields');
     msg.classList.add('error');
     msg.innerHTML = 'Please enter all fields';
