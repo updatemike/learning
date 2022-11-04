@@ -14,26 +14,31 @@ function getPlayerChoice() {
     return playerChoice;
 }
 
+function stringCapital(string) {
+    /* Turn first letter of string into uppercase */
+    return string.slice(0, 1).toUpperCase() + string.slice(1);
+}
+
 function playRound() {
     /* Get computer and player choice and play a round of Rock,Paper,Scissors */
     const computerChoice = getComputerChoice();
     const playerChoice = getPlayerChoice();
     if (computerChoice === playerChoice) {
-        return ["It was a tie. Both picked " + computerChoice.slice(0, 1).toUpperCase() + computerChoice.slice(1) + ".",
-            "t"]
+        return ["It was a tie. Both picked " + stringCapital(playerChoice) + ".",
+            "t"];
     } else if ((playerChoice === "rock" && computerChoice === "scissors") ||
         (playerChoice === "scissors" && computerChoice === "paper") ||
         (playerChoice === "paper" && computerChoice === "rock")) {
-        return (["You won! " + playerChoice.slice(0, 1).toUpperCase() + playerChoice.slice(1) + " beats " + computerChoice.slice(0, 1).toUpperCase() + computerChoice.slice(1) + ".",
-            "w"])
+        return ["You won! " + stringCapital(playerChoice) + " beats " + stringCapital(computerChoice) + ".",
+            "w"]
     } else {
-        return ["You lost! " + computerChoice.slice(0, 1).toUpperCase() + computerChoice.slice(1) + " beats " + playerChoice.slice(0, 1).toUpperCase() + playerChoice.slice(1) + ".",
-            "l"]
+        return ["You lost! " + stringCapital(computerChoice) + " beats " + stringCapital(playerChoice) + ".",
+            "l"];
     }
 }
 
 function game() {
-    /* Play 5 rounds. Keep track of wins. Report winner and score at the end of 5 rounds. */
+    /* Play round. Report round result. Keep track of wins. Report winner and final score after 5 rounds. */
     let computerScore = 0;
     let playerScore = 0;
     let nRounds = 1;
