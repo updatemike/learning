@@ -1,5 +1,5 @@
-
-/* Foundations fundamentals Part 1 */
+/* Javascript Fundamentals */
+/* Fundamentals Part 1 */
 let admin;
 let name;
 
@@ -20,15 +20,15 @@ let thirdExample = "The result is: " + x + y; /* The result is: 1020 -> same rea
 let fourthExample = x + y + z; /* 3010 -> JS interpreter works from left to right. It added the numbers then added the string */
 let fifthExample = y - z; /* 10 -> JS always tries to change strings to numbers when doing maths except for the + operator */
 
-/* Assignment */
-/* 1 */
+// Assignment
+// 1
 console.log("part 1")
 console.log(23 + 97)
-/* 2 */
+// 2
 console.log(`1 2 3 4 5 6`)
-/* 3 */
+// 3
 console.log((4 + 6 + 9) / 77);
-/* 4 */
+// 4 
 let a = 10;
 console.log(a);
 let b = 7 * a;
@@ -42,7 +42,7 @@ console.log(percentage)
 
 
 
-/* Foundations fundamentals Part 2 */
+/* Fundamentals Part 2 */
 console.log("part 2")
 const escapeCharacter = "Hello \"World\"";
 console.log(escapeCharacter);
@@ -78,9 +78,8 @@ console.log(whatColor);
 
 
 
-/* Foundations fundamentals Part 3 */
-
-/* Assignment */
+/* Fundamentals Part 3 */
+// Assignment
 function add7(number) {
     return number + 7;
 }
@@ -98,11 +97,10 @@ function lastLetter(string) {
 
 
 /* Problem solving */
+// let fizzBuzzInput = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: ")); 
 
-/* let fizzBuzzInput = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: ")); */
-
-/* if (typeof (fizzBuzzInput) == "number") { }
-else { fizzBuzzInput = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: ")) } */
+// if (typeof (fizzBuzzInput) == "number") { }
+//else { fizzBuzzInput = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: ")) } 
 
 function fizzBuzz() {
     let fizzBuzzInput;
@@ -122,11 +120,17 @@ function fizzBuzz() {
     }
 }
 
-/* fizzBuzzInput() */
+// fizzBuzzInput()
+
 
 
 
 /* Understanding errors */
+// Syntax errors, Logic Errors
+// Type Error, Syntax Error, Reference Error
 
-/* Syntax errors, Logic Errors */
-/* Type Error, Syntax Error, Reference Error */
+
+
+
+/* Fundamentals part 4 */
+
