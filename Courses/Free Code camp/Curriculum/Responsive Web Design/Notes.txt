@@ -11,6 +11,7 @@ Tables:
 <th>table header</th> <td>table data</td>
 
 #CSS
+overflow: hidden; => hides overflow
 
 100% vs 100vw => % counts margin
 
@@ -26,6 +27,8 @@ pseudo-selector
     span:not(.class-name) => all spans without class-name class
     span:nth-of-type(3) => target 3rd span sibling
     a:hover => hover effect
+    ::before | ::after => before first | after last,  of element
+    
 
 clip-path => area of the element that is visible => clip-path: inset(50%);
     => inset() rectangle where values disctate how much of the content is hidden
@@ -35,3 +38,6 @@ clip-path => area of the element that is visible => clip-path: inset(50%);
 calc(1 + 1) => operators such as + must have whitespaces around them
 
 Tables: border-collapse => collapse; seperate => border between elements
+
+@media (max-width:900px){} => conditional css
+    @media (condition) and (condition){} => can use logical operators
