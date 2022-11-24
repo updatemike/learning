@@ -1,4 +1,8 @@
 #HTML
+Font Awesome => https://use.fontawesome.com/releases/v5.8.2/css/all.css
+    <i class="fas fa-music"></i> => fas is category font awesome solid
+                                    fa-music is the specific icon
+
 Tables:
 <table></table>
 <caption>Title</caption>
