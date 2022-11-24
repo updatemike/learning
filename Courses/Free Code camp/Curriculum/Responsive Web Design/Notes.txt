@@ -1,0 +1,33 @@
+#HTML
+Tables:
+<table></table>
+<caption>Title</caption>
+<thead></thead> <tbody></tbody>
+<tr></tr>
+<th>table header</th> <td>table data</td>
+
+#CSS
+
+100% vs 100vw => % counts margin
+
+border: 0 !important => !important makes it so it always applies and can't be overridden
+
+position: static; relative; absolute; fixed; sticky;
+
+pseudo-selector
+    h1:first-of-type => target first element that matches selector h1
+    span[class] => target any span with class attribute set
+    span[class="class-name"] => span with class class-name
+    span[class~="class-name"] => span.class-name => span whose class contains class-name
+    span:not(.class-name) => all spans without class-name class
+    span:nth-of-type(3) => target 3rd span sibling
+    a:hover => hover effect
+
+clip-path => area of the element that is visible => clip-path: inset(50%);
+    => inset() rectangle where values disctate how much of the content is hidden
+    => inset(50%) hides the whole element but keeps it's space on the structure
+    => https://ishadeed.com/article/clip-path/
+
+calc(1 + 1) => operators such as + must have whitespaces around them
+
+Tables: border-collapse => collapse; seperate => border between elements
