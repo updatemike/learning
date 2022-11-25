@@ -1,4 +1,6 @@
 #HTML
+&lt; &gt; => < >
+
 Font Awesome => https://use.fontawesome.com/releases/v5.8.2/css/all.css
     <i class="fas fa-music"></i> => fas is category font awesome solid
                                     fa-music is the specific icon
@@ -31,7 +33,7 @@ pseudo-selector
     
 
 clip-path => area of the element that is visible => clip-path: inset(50%);
-    => inset() rectangle where values disctate how much of the content is hidden
+    => inset() rectangle where values dictate how much of the content is hidden
     => inset(50%) hides the whole element but keeps it's space on the structure
     => https://ishadeed.com/article/clip-path/
 
