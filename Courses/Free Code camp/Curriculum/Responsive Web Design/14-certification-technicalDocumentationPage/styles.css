@@ -105,8 +105,6 @@ code {
   }
   #navbar {
     height: auto;
-  }
-  #navbar li:last-of-type {
     border-bottom: 2px solid rgba(188, 188, 188, 0.5);
   }
 }
