@@ -20,11 +20,10 @@ header {
 
 a {
   text-decoration: none;
-  color: whitesmoke;
-}
-
-a:hover {
   color: #e3c26f;
+}
+a:hover {
+  color: whitesmoke;
 }
 
 /* NAVBAR */
@@ -32,9 +31,15 @@ a:hover {
 
 #navbar {
   color: whitesmoke;
-  position: sticky;
   height: 100%;
   border-right: 2px solid rgba(188, 188, 188, 0.5);
+}
+
+#navbar a {
+  color: whitesmoke;
+}
+#navbar a:hover {
+  color: #e3c26f;
 }
 
 #navbar header {
@@ -51,23 +56,34 @@ a:hover {
 
 #main-doc {
   color: whitesmoke;
-  padding: min(2rem, 2vw);
+  position: relative;
+  padding: min(1rem, 2vw);
   overflow-y: scroll;
   width: 100%;
 }
 
-#main-doc section {
-  margin-top: min(2rem, 4vw);
+#main-doc #top {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+#main-doc section {
+  padding: min(2rem, 4vw) 0 min(2rem, 4vw) min(1rem, 2vw);
+  border-bottom: 2px solid rgba(188, 188, 188, 0.5);
+}
+#main-doc section:first-of-type {
+  padding: 0 0 min(2rem, 4vw) min(1rem, 2vw);
+}
+#main-doc header {
+  margin-bottom: min(1rem, 2vw);
+}
 #main-doc article {
   margin-left: min(1rem, 2vw);
 }
 
-#main-doc .indent,
-#main-doc ul,
-#main-doc ol {
-  margin-left: 2rem;
+#main-doc .indent {
+  margin-left: min(2rem, 4vw);
 }
 
 #main-doc li {
