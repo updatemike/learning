@@ -1,4 +1,6 @@
 #HTML
+divName$*4 => divName1; divName2; divName3; divname4;
+
 &lt; &gt; => < >
 
 Font Awesome => https://use.fontawesome.com/releases/v5.8.2/css/all.css
@@ -13,6 +15,9 @@ Tables:
 <th>table header</th> <td>table data</td>
 
 #CSS
+:root{}
+*{}
+
 overflow: hidden; => hides overflow
 
 100% vs 100vw => % counts margin
@@ -43,3 +48,11 @@ Tables: border-collapse => collapse; seperate => border between elements
 
 @media (max-width:900px){} => conditional css
     @media (condition) and (condition){} => can use logical operators
+
+variables:
+    --variable-name: value;
+    var(--variable-name, fallback-value) => var(--dogeorange,orange)
+
+gradients => gradient-type(90deg, color1, color1 10%, color2 20%, color3);
+    radial-gradient(circle closest-corner at 15% 15%, #ffcf33, #ffcf33 20%, #ffff66 21%, #bbeeff 100%);
+        move center to 15% top, 15% left, end gradient at closest corner, keep it circle
