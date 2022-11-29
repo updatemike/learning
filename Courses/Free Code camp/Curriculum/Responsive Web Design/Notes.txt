@@ -14,9 +14,19 @@ Tables:
 <tr></tr>
 <th>table header</th> <td>table data</td>
 
+Attributes: loading="lazy" => load as needed or after non-lazy
+
+blockquote => quote block (2 lines)
+
+hr => empty line or break in page
+
+article => self-contained content, should make sense on it's own
+
+aside => portion whose content is only indiractly related to main content
+
 #CSS
 :root{}
-*{}
+*,::before,::after{} => target all elements
 
 overflow: hidden; => hides overflow
 
