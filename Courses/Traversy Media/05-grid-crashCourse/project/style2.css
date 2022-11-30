@@ -97,8 +97,8 @@ body {
     width: 100%;
   }
 
-  .card {
-    grid-column: 1 / 2 !important;
-    grid-row: auto !important;
+  .testimonials .card {
+    grid-column: 1;
+    grid-row: auto;
   }
 }
