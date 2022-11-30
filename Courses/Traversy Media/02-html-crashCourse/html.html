@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta name="description" content="HTML Cheat Sheet" />
+    <meta name="keywords" content="html, cheat sheet, learning, self taught" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Cheat Sheet</title>
+    <!-- Styling the footer element in html -->
+    <style type="text/css">
+      footer {
+        text-align: center;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Headings -->
+    <h1>heading 1</h1>
+    <h2>heading 2</h2>
+    <h3>heading 3</h3>
+    <h4>heading 4</h4>
+    <h5>heading 5</h5>
+    <h6>heading 6</h6>
+
+    <!-- Paragraph -->
+    <p>
+      <!-- strong and em (emphasize) are semantic tags -->
+      <strong>Lorem</strong>
+      <em>ipsum</em>
+      <!-- link(a) and attributes(href, target, id, class ...) -->
+      <a href="https://google.com" target="_blank">dolor</a>
+      sit amet consectetur adipisicing elit. Quod, unde.
+    </p>
+
+    <!-- Lists -->
+    <!-- Unordered List -->
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+    <!-- Ordered List -->
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
+
+    <!-- Tables -->
+    <table>
+      <thead>
+        <!-- table row -->
+        <tr>
+          <!-- table header -->
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- table data -->
+          <td>Mike Andrew</td>
+          <td>email@email.com</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <!-- table data -->
+          <td>John Doe</td>
+          <td>email2@email.com</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Line break -->
+    <br />
+    <!-- Horizontal Rule -->
+    <hr />
+
+    <!-- Forms -->
+    <form action="backend.stuff" method="post">
+      <label for="first-name">First Name</label>
+      <!-- There are many input types => text, date, email, number, ... -->
+      <input placeholder="Your first name" type="text" name="first-name" />
+      <br />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="" cols="30" rows="3"></textarea>
+      <br />
+
+      <label for="gender">Gender</label>
+      <select name="gender" id="">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br />
+
+      <!-- Submit button, submits to form 'action' attribute -->
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+
+    <!-- Buttons -->
+    <button onclick="">Click Me</button>
+
+    <!-- Images -->
+    <img src="./images/sample.jpg" alt="Text that shows when img doesn't load" />
+
+    <!-- Quotation -->
+    <blockquote>
+      The
+      <abbr title="World Wise Web">WWW</abbr>
+      <cite>is awesome</cite>
+      .
+    </blockquote>
+
+    <!-- HTML5 Semantic tag -->
+    <header></header>
+    <main></main>
+    <footer>Copyright &COPY; updatemike 2022</footer>
+    <nav></nav>
+    <aside></aside>
+    <section></section>
+    <article></article>
+
+    <!-- Notes
+    Inline elements  => div, h1-h6, p, form, semantic tags, ...  => Do not start on a new like, take only necessary width
+    Block elements  => span, img, a, ...  => Start on a new line, take full width available 
+    -->
+  </body>
+</html>
