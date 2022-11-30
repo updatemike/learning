@@ -1,0 +1,27 @@
+LOCAL
+git init                    //Initialize Local Git repo
+git add <file>              //Add file(s) to index
+git rm --cached <file>      //Remove file(s) from index
+git status                  //Check status of working tree
+git commit                  //Commit changes in Index
+
+GITHUB
+git push                    //Push to remote repo
+git pull                    //Pull latest from remote repo
+git clone                   //Clone repo into a new directory
+
+NOTES
+<file> => . => All files
+git commit -m "commit message"
+
+IGNORE
+touch .gitignore            //Create .gitignore file => any directory written in this file is ignored
+    /folder1
+    /log.txt
+    *.html                  //All html files
+
+BRANCH
+git branch myBranchName     //Create branch
+git checkout myBranchName   //Switch to myBranchName branch => if you switch branches your local files
+                                                                will change to that branche's
+git merge myBranchName      //Merge myBranchName into main branch
