@@ -1,5 +1,8 @@
 #HTML
-divName$*4 => divName1; divName2; divName3; divname4;
+
+lorem30, lorem*30 => adds lorem test text
+
+divName${text $}*4 => divName1 with "text 1"; divName2 with "text 2"; divName3 with "text 3"; divname4 with "text 4";
 
 &lt; &gt; => < >
 
