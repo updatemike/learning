@@ -1,0 +1,6 @@
+/* Inline CSS => Directly in the html; Internal CSS => <style> tags withing a single document; External CSS => Link external .cc file */
+/* CSS Selectors => (selector) { property: value; } */
+
+h1.external_css {
+  color: green;
+}
