@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>GIT</title>
+    <style>
+      /* From extension vscode.github */
+      /*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+      .vscode-dark img[src$="\#gh-light-mode-only"],
+      .vscode-light img[src$="\#gh-dark-mode-only"] {
+        display: none;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css" />
+    <link rel="stylesheet" href="git.css" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    </style>
+    <style>
+      .task-list-item {
+        list-style-type: none;
+      }
+
+      .task-list-item-checkbox {
+        margin-left: -20px;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="vscode-body vscode-light">
+    <h1 id="git">GIT</h1>
+    <h2 id="local">LOCAL</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>COMMAND</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>git init</code></td>
+          <td>Initialize local git repo</td>
+        </tr>
+        <tr>
+          <td><code>git add &lt;file&gt;</code></td>
+          <td>Add file(s) to index</td>
+        </tr>
+        <tr>
+          <td><code>git rm --cached &lt;file&gt;</code></td>
+          <td>Remove file(s) from index</td>
+        </tr>
+        <tr>
+          <td><code>git status</code></td>
+          <td>Check status of working tree</td>
+        </tr>
+        <tr>
+          <td><code>git commit</code></td>
+          <td>Commit changes in Index</td>
+        </tr>
+        <tr>
+          <td><code>git commit -m &quot;commit message&quot;</code></td>
+          <td>Commit with a message</td>
+        </tr>
+        <tr>
+          <td><code>git branch</code></td>
+          <td>Check existing branches</td>
+        </tr>
+        <tr>
+          <td><code>git branch myBranchName</code></td>
+          <td>
+            Create
+            <code>myBranchName</code>
+            branch
+          </td>
+        </tr>
+        <tr>
+          <td><code>git checkout myBranchName</code></td>
+          <td>
+            Switch to
+            <code>myBranchName</code>
+            branch
+          </td>
+        </tr>
+        <tr>
+          <td><code>git merge myBranchName</code></td>
+          <td>
+            Merge
+            <code>myBranchName</code>
+            into
+            <code>main</code>
+            branch
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="github">GITHUB</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>COMMAND</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>git push</code></td>
+          <td>Push to remote repo</td>
+        </tr>
+        <tr>
+          <td><code>git pull</code></td>
+          <td>Pull latest from remote repo</td>
+        </tr>
+        <tr>
+          <td><code>git clone</code></td>
+          <td>Clone repo into a new directory</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="notes">NOTES</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>COMMAND</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.</code></td>
+          <td>All files</td>
+        </tr>
+        <tr>
+          <td><code>.gitignore</code></td>
+          <td>File where you input directories/files ignored by git</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

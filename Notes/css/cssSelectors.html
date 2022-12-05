@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selectors</title>
+    <style>
+      /* From extension vscode.github */
+      /*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+      .vscode-dark img[src$="\#gh-light-mode-only"],
+      .vscode-light img[src$="\#gh-dark-mode-only"] {
+        display: none;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css" />
+    <link rel="stylesheet" href="cssSelectors.css" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    </style>
+    <style>
+      .task-list-item {
+        list-style-type: none;
+      }
+
+      .task-list-item-checkbox {
+        margin-left: -20px;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="vscode-body vscode-light">
+    <div class="left">
+      <h1 id="selectors">Selectors</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Selector</th>
+            <th>Dscription (selects)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>*</code></td>
+            <td>all</td>
+          </tr>
+          <tr>
+            <td><code>head</code></td>
+            <td>
+              <code>head</code>
+              tag
+            </td>
+          </tr>
+          <tr>
+            <td><code>red</code></td>
+            <td>
+              <code>&quot;red&quot;</code>
+              class
+            </td>
+          </tr>
+          <tr>
+            <td><code>#nav</code></td>
+            <td>
+              <code>&quot;nav&quot;</code>
+              id
+            </td>
+          </tr>
+          <tr>
+            <td><code>div.row</code></td>
+            <td>
+              <code>div</code>
+              tag AND
+              <code>&quot;row&quot;</code>
+              class
+            </td>
+          </tr>
+          <tr>
+            <td><code>[aria-hidden=&quot;true&quot;]</code></td>
+            <td>
+              <code>aria-hidden</code>
+              attribute
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- | ``                     |                             | -->
+      <table>
+        <thead>
+          <tr>
+            <th>Selector combination</th>
+            <th>Description (selects)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>li a</code></td>
+            <td>
+              <code>a</code>
+              tags children of
+              <code>li</code>
+              tags
+            </td>
+          </tr>
+          <tr>
+            <td><code>div.row *</code></td>
+            <td>
+              all descendants of elements with
+              <code>div</code>
+              tag AND
+              <code>row</code>
+              class
+            </td>
+          </tr>
+          <tr>
+            <td><code>li &gt; a</code></td>
+            <td>
+              <code>a</code>
+              elements direct descendants of
+              <code>li</code>
+              elements
+            </td>
+          </tr>
+          <tr>
+            <td><code>li + a</code></td>
+            <td>
+              FIRST
+              <code>a</code>
+              after each
+              <code>li</code>
+            </td>
+          </tr>
+          <tr>
+            <td><code>li, a</code></td>
+            <td>
+              all
+              <code>a</code>
+              elements and all
+              <code>li</code>
+              elements
+            </td>
+          </tr>
+          <tr>
+            <td><code>li ~ a</code></td>
+            <td>
+              all
+              <code>a</code>
+              after
+              <code>li</code>
+              that are siblings of
+              <code>li</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Pseudo-selectors</th>
+            <th>Description (selects)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>:first-child</code></td>
+            <td>first child of element</td>
+          </tr>
+          <tr>
+            <td><code>:last-child</code></td>
+            <td>last child of element</td>
+          </tr>
+          <tr>
+            <td><code>:nth-child()</code></td>
+            <td>nth child of element. accepts integers, even, odd, formulas</td>
+          </tr>
+          <tr>
+            <td><code>a::not(.name)</code></td>
+            <td>
+              all
+              <code>a</code>
+              elements not of
+              <code>name</code>
+              class
+            </td>
+          </tr>
+          <tr>
+            <td><code>::after</code></td>
+            <td>allows inserting content after the element</td>
+          </tr>
+          <tr>
+            <td><code>::before</code></td>
+            <td>allow inseting content before the element</td>
+          </tr>
+          <tr>
+            <td><code>:hover</code></td>
+            <td>element being hovered</td>
+          </tr>
+          <tr>
+            <td><code>:focus</code></td>
+            <td>element being focused</td>
+          </tr>
+          <tr>
+            <td><code>:active</code></td>
+            <td>element being clicked by mouse pointer</td>
+          </tr>
+          <tr>
+            <td><code>:link</code></td>
+            <td>links that have not been clicked yet</td>
+          </tr>
+          <tr>
+            <td><code>:visited</code></td>
+            <td>links that have already been clicked</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
