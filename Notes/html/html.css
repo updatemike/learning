@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table {
+  margin: 10px;
+}
+th {
+  width: 50%;
+}
+code {
+  color: hsl(219, 91%, 55%);
+  font-weight: bold;
+}
+tr:nth-of-type(even) {
+  background-color: hsla(0, 5%, 83%, 0.356);
+}
