@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <img
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+        alt="Original Trombones Logo"
+        id="header-img"
+      />
+      <!-- navbar always on top -->
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#form">Link</a></li>
+          <li>
+            <a class="nav-link" href="#video">Link</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#info">Link</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email" id="email" name="email" placeholder="Enter your email address" />
+        <!-- pressing submit input sends to https://www.freecodecamp.com/email-submit-->
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </section>
+
+    <main>
+      <iframe id="video" src="https://www.youtube.com/watch?v=Me0PfuNLl-Q" frameborder="0" allowfullscreen></iframe>
+      <div id="info"></div>
+    </main>
+  </body>
+</html>
