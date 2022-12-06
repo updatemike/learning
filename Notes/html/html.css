@@ -3,15 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1,
+h2 {
+  margin: 0 10%;
+}
 table {
-  margin: 10px;
+  width: 80%;
+  margin: 10px auto;
 }
 th {
   width: 50%;
 }
 code {
-  color: hsl(219, 76%, 40%);
-  font-weight: bold;
+  color: hsl(219, 55%, 51%);
+  font-weight: 600;
 }
 tr:nth-of-type(even) {
   background-color: hsla(0, 5%, 83%, 0.356);
