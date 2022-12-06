@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Markdown</title>
+    <style>
+      /* From extension vscode.github */
+      /*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+      .vscode-dark img[src$="\#gh-light-mode-only"],
+      .vscode-light img[src$="\#gh-dark-mode-only"] {
+        display: none;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css" />
+    <link rel="stylesheet" href="md.css" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    </style>
+    <style>
+      .task-list-item {
+        list-style-type: none;
+      }
+
+      .task-list-item-checkbox {
+        margin-left: -20px;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="vscode-body vscode-light">
+    <h1 id="markdown">Markdown</h1>
+    <h2 id="links-and-images">Links and Images</h2>
+    <pre><code class="language-md">[<span class="hljs-string">Coding</span>](<span class="hljs-link">URL</span>) is cool.`
+</code></pre>
+    <p>
+      <a href="URL">Coding</a>
+      is cool.
+    </p>
+    <h3 id="images">Images</h3>
+    <pre><code class="language-markdown">![<span class="hljs-string">alt-text</span>](<span class="hljs-link">https://imageurl</span>)
+</code></pre>
+    <h2 id="code-block">Code block</h2>
+    <pre>
+```md
+ [Coding](URL) is cool.
+ ```</pre
+    >
+    <pre><code class="language-md">[<span class="hljs-string">Coding</span>](<span class="hljs-link">URL</span>) is cool.
+</code></pre>
+    <h2 id="notes-warnings-and-callouts">Notes, warnings and callouts</h2>
+    <pre><code class="language-md"><span class="hljs-quote">&gt; <span class="hljs-strong">**Note:**</span> This is how you write a note.</span>
+<span class="hljs-quote">&gt;
+&gt; It can have multiple lines.</span>
+</code></pre>
+    <blockquote>
+      <p>
+        <strong>Note:</strong>
+        This is how you write a note.
+      </p>
+      <p>It can have multiple lines.</p>
+    </blockquote>
+    <pre><code class="language-md"><span class="hljs-quote">&gt; <span class="hljs-strong">**Warning:**</span> This is how you write a warning.</span>
+</code></pre>
+    <pre><code class="language-md"><span class="hljs-quote">&gt; <span class="hljs-strong">**Callout:**</span> <span class="hljs-strong">**This is how you write a callout.**</span></span>
+</code></pre>
+    <h2 id="lists">Lists</h2>
+    <h3 id="ordered-lists">Ordered Lists</h3>
+    <pre><code class="language-markdown"><span class="hljs-bullet">1.</span> First item
+<span class="hljs-bullet">   1.</span> Nested item
+</code></pre>
+
+    <h3 id="unordered-lists">Unordered Lists</h3>
+    <pre><code class="language-markdown"><span class="hljs-bullet">-</span> First item
+</code></pre>
+    <h2 id="tables">Tables</h2>
+    <pre><code class="language-md">| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --------- | --------- |
+| cell 1    | cell 2    | cell 3    |
+| cell 4    | cell 5    | cell 6    |
+</code></pre>
+    <table>
+      <thead>
+        <tr>
+          <th>Heading 1</th>
+          <th>Heading 2</th>
+          <th>Heading 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cell 1</td>
+          <td>cell 2</td>
+          <td>cell 3</td>
+        </tr>
+        <tr>
+          <td>cell 4</td>
+          <td>cell 5</td>
+          <td>cell 6</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="text">Text</h2>
+    <pre><code class="language-md"><span class="hljs-section"># header text -&gt; Biggest header</span>
+
+...
+
+<span class="hljs-section">###### header text -&gt; Smallest header</span>
+</code></pre>
+    <pre><code class="language-md">New line: <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span></span> or 2 x spacebar at the end of the line.
+</code></pre>
+    <pre><code class="language-md">Emphasis: <span class="hljs-emphasis">_underscores_</span>.
+Strong: <span class="hljs-strong">**underscores**</span>.
+Combined: <span class="hljs-strong">**<span class="hljs-emphasis">_asterisks and underscores_</span>**</span>.
+Strikethrough: ~~Scratch this.~~
+</code></pre>
+    <p>
+      Emphasis:
+      <em>underscores</em>
+      .
+      <br />
+      Strong:
+      <strong>underscores</strong>
+      .
+      <br />
+      Combined:
+      <strong><em>asterisks and underscores</em></strong>
+      .
+      <br />
+      Strikethrough:
+      <s>Scratch this.</s>
+    </p>
+  </body>
+</html>
