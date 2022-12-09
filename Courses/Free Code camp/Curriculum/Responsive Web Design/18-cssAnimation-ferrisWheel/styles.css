@@ -1,0 +1,130 @@
+body {
+  background-color: grey;
+}
+
+.wheel {
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-left: 50px;
+  position: absolute;
+  height: 55vw;
+  width: 55vw;
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.line {
+  background-color: black;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.cabin {
+  background-color: red;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  border: 2px solid;
+}
+
+/* TRANSFORM */
+.line {
+  /* transform-origin -> used to set the point around which a CSS transformation is applied
+    0% 0% -> offsets the origin point 0% from the left and 0% from the top setting it to the top left corner of the element */
+  transform-origin: 0% 0%;
+}
+.line:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+.line:nth-of-type(3) {
+  transform: rotate(120deg);
+}
+.line:nth-of-type(4) {
+  transform: rotate(180deg);
+}
+.line:nth-of-type(5) {
+  transform: rotate(240deg);
+}
+.line:nth-of-type(6) {
+  transform: rotate(300deg);
+}
+
+.cabin {
+  /* 50% 0% -> offset transform origin 50% from the left and 0% from the top */
+  transform-origin: 50% 0%;
+}
+.cabin:first-of-type {
+  right: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(2) {
+  top: 93.5%;
+  right: 17%;
+}
+.cabin:nth-of-type(3) {
+  right: 67%;
+  top: 93.5%;
+}
+.cabin:nth-of-type(4) {
+  left: -8.5%;
+  top: 50%;
+}
+.cabin:nth-of-type(5) {
+  left: 17%;
+  top: 7%;
+}
+.cabin:nth-of-type(6) {
+  right: 17%;
+  top: 7%;
+}
+
+/* ANIMATION */
+/* @keyframes at-rule is used to define the flow of a CSS animation. They need a name, the one under this comment is called 'wheel'.
+You can create selectors for specific points of the animation such as 0%, 50%, etc or us from and to to define the start and end of the sequence */
+@keyframes wheel {
+  /* Beginning of the animation */
+  0% {
+    /* This starts the animation with 0 degrees */
+    transform: rotate(0deg);
+  }
+  /* End of the animation */
+  100% {
+    /* Animation will end with a rotation of 360 degrees */
+    transform: rotate(360deg);
+  }
+}
+.wheel {
+  /* animation-name -> link @keyframes rule to a CSS selector like below */
+  animation-name: wheel;
+  /* animation-duration -> sets how long the animation lasts in seconds (s) or milliseconds (ms) */
+  animation-duration: 10s;
+  /* animation-iteration-count -> how many times the animation should repeat, number or infinite */
+  animation-iteration-count: infinite;
+  /* animation-timing-function -> how the animation should progress over time. 'linear' makes the animation run at the same rate from start to finish */
+  animation-timing-function: linear;
+}
+
+@keyframes cabins {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.cabin {
+  /* animation -> shorthand for all the properties used on the '.wheel' selector above */
+  animation: cabins 10s ease-in-out infinite;
+}
