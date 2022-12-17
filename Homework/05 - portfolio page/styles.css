@@ -1,0 +1,112 @@
+/* Your portfolio should have at least one media query
+The height of the welcome section should be equal to the height of the viewport */
+/* GLOBAL */
+:root {
+  --doge-gold: hsl(43, 67%, 66%);
+  --doge-black: hsl(0, 0%, 10%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.flex {
+  display: flex;
+}
+
+/* NAVBAR */
+
+#navbar {
+  /* The navbar should always be at the top of the viewport */
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  background-color: var(--doge-black);
+  width: 100%;
+  border-bottom: 2px solid var(--doge-gold);
+  /* children */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+#navbar > ul {
+  gap: 1rem;
+}
+
+/* WELCOME */
+#welcome-section {
+  background-color: var(--doge-gold);
+  min-height: 100vh;
+  width: 100%;
+  /* children */
+  align-items: center;
+  justify-content: center;
+}
+#welcome-section ul {
+  align-items: center;
+  gap: 1rem;
+}
+#welcome-section a {
+  color: grey;
+}
+
+/* PROJECTS */
+
+#projects {
+  background-color: var(--doge-black);
+  padding: 2rem;
+  min-height: 100vh;
+  width: 100%;
+  /* children */
+  justify-content: center;
+  align-items: center;
+}
+
+#project-tile-wrapper {
+  /* children */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+.project-tile {
+  height: 150px;
+  width: 150px;
+  background-color: var(--doge-gold);
+  border-radius: 10px;
+  /* children */
+  padding: 1rem;
+  color: var(--doge-black);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 700px) {
+  .project-tile {
+    height: auto;
+    width: calc(100vw - 4rem);
+    aspect-ratio: 1 / 1;
+  }
+}
