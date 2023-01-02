@@ -4,48 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="icon" href="./images/sunglass-doge-500.png" type="image/icon type" />
+    <title>Hi, I'm Mike!</title>
   </head>
+
   <body>
     <!-- Your portfolio should have a navbar with an id of navbar -->
-    <navbar id="navbar" class="flex">
-      <div class="logo"><img src="" alt="doge" /></div>
-      <ul class="flex">
+    <div id="navbar">
+      <div id="navbar-wrapper" class="flex">
         <!-- The navbar should contain at least one link that you can click on to navigate to different
-    sections of the page  -->
-        <li><a href="#welcome-section">link 1</a></li>
-        <li><a href="#projects">link 2</a></li>
-      </ul>
-    </navbar>
-
+        sections of the page -->
+        <a href="#"><img src="./images/sunglass-doge-500.png" alt="Home" /></a>
+      </div>
+    </div>
     <!-- Your portfolio should have a welcome section with an id of welcome-section -->
-    <section id="welcome-section" class="flex">
-      <div id="welcome-wrapper">
+    <div id="welcome-section" class="flex">
+      <div id="welcome-section-wrapper">
         <!-- The welcome section should have an h1 element that contains text -->
-        <h1>welcome section H1</h1>
+        <h1>Hi, I'm Mike!</h1>
+
         <ul class="flex">
-          <li><a id="profile-link" target="_blank" href="">github link</a></li>
-          <!-- <li><a href="">freeCodeCamp</a></li> -->
+          <li>
+            <!-- The navbar should contain at least one link that you can click on to navigate to
+            different sections of the page -->
+            <a id="github-page-link profile-link" target="" href="javascript:;">
+              <i class="fab fa-github"></i>
+              Github
+            </a>
+          </li>
+          <li>&bull;</li>
+          <li>
+            <a id="learning-page-link profile-link" href="javascript:;">
+              <i class="fa-solid fa-book-atlas"></i>
+              Knowledge
+            </a>
+          </li>
+          <li>&bull;</li>
+          <li>
+            <a id="project-page-link profile-link" href="javascript:;">
+              <i class="fa fa-folder-open" aria-hidden="true"></i>
+              Projects
+            </a>
+          </li>
         </ul>
-
-        <!-- Your portfolio should have a link with an id of profile-link, which opens your GitHub or
-      freeCodeCamp profile in a new tab -->
       </div>
-    </section>
-
+    </div>
     <!-- Your portfolio should have a projects section with an id of projects -->
-    <section id="projects" class="flex">
-      <div id="project-tile-wrapper" class="flex">
-        <!-- The projects section should contain at least one element with a class of project-tile to hold
-      a project  -->
+    <div id="projects">
+      <!-- The projects section should contain at least one element with a class of project-tile to hold
+      a project -->
+      <div class="project-tile">
         <!-- The projects section should contain at least one link to a project -->
-        <a href=""><div class="project-tile">project tile</div></a>
-        <a href=""><div class="project-tile">project tile</div></a>
-        <a href=""><div class="project-tile">project tile</div></a>
-        <a href=""><div class="project-tile">project tile</div></a>
-        <a href=""><div class="project-tile">project tile</div></a>
+        <a href=""></a>
       </div>
-    </section>
+    </div>
   </body>
 </html>
