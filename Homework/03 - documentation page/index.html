@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<!--  -->
+<nav id="navbar">
+  <header>Homelab Documentation</header>
+  <ul>
+    <li>
+      <a href="#Installation" class="nav-link">Installation</a>
+    </li>
+    <li>
+      <a href="#DietPi_tools" class="nav-link">DietPi tools</a>
+    </li>
+    <li>
+      <a href="#filler_one" class="nav-link">filler one</a>
+    </li>
+    <li>
+      <a href="#filler_two" class="nav-link">filler two</a>
+    </li>
+    <li>
+      <a href="#filler_three" class="nav-link">filler three</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- 10 p, 5 code, 5 li-->
+<main id="main-doc">
+  <section id="Installation" class="main-section">
+    <header>Installation</header>
+    <article>
+      <ol>
+        <li>
+          Open
+          <a href="https://dietpi.com/#download">dietpi.com</a>
+          select your SBC and download.
+        </li>
+        <li>Extract the zipped file.</li>
+        <li>
+          Using
+          <a href="https://www.balena.io/etcher/">belenaEtcher</a>
+          flash OS image to target drive.
+        </li>
+        <li>Eject drive, plug into SBC and boot SBC. First boot takes a while.</li>
+        <li>
+          Find your device's local IP and connect via
+          <a href="https://ninite.com/">PuTTY</a>
+          .
+        </li>
+        <li>
+          Login to your SBC:
+          <ul>
+            <li>
+              login:
+              <code>root</code>
+            </li>
+            <li>
+              password:
+              <code>dietpi</code>
+            </li>
+          </ul>
+        </li>
+        <li>Go through the steps on your screen and you're done!</li>
+      </ol>
+    </article>
+  </section>
+
+  <section id="DietPi_tools" class="main-section">
+    <header>DietPi tools</header>
+    <article><code>dietpi-launcher</code></article>
+    <p class="indent">Access all DietPi OS tools</p>
+    <article><code>dietpi-software</code></article>
+    <p class="indent">Install or remove dietpi software</p>
+    <article><code>dietpi-vpn</code></article>
+    <p class="indent">DietPi's own VPN tool</p>
+    <article><code>dietpi-config</code></article>
+    <p class="indent">Access DietPi system settings</p>
+    <article><code>dietpi-cleaner</code></article>
+    <p class="indent">Perform maintenance on your DietPi installation</p>
+  </section>
+
+  <section id="filler_one" class="main-section">
+    <header>filler one</header>
+    <article></article>
+  </section>
+
+  <section id="filler_two" class="main-section">
+    <header>filler two</header>
+    <article>
+      <p>filler paragraph</p>
+      <p>filler paragraph</p>
+      <p>filler paragraph</p>
+      <p>filler paragraph</p>
+      <p>filler paragraph</p>
+    </article>
+  </section>
+
+  <section id="filler_three" class="main-section">
+    <header>filler three</header>
+    <article></article>
+  </section>
+</main>
