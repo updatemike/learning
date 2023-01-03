@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>freeCodeCamp Survey</title>
+  </head>
+  <body>
+    <div class="fcc-form-wrapper">
+      <!-- You should have a page title in an h1 element with an id of title -->
+      <h1 id="title">Free Code Camp survey form.</h1>
+      <!-- You should have a short explanation in a p element with an id of description -->
+      <p id="description">Please fill out this survey with the required information. We appreciate your input.</p>
+      <!-- You should have a form element with an id of survey-form -->
+      <form action="" id="survey-form">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <div id="personal-info">
+            <!-- Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text -->
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+
+            <!-- Inside the form element, you are required to enter your email in an input field that has an id of email -->
+            <!-- If you enter an email that is not formatted correctly, you will see an HTML5 validation error -->
+            <label for="email" id="email-label">E-mail</label>
+            <input type="email" id="email" placeholder="myemail@email.mail" required />
+
+            <!-- Inside the form, you can enter a number in an input field that has an id of number -->
+            <!-- The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser). -->
+            <!-- If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error -->
+            <label for="number" id="number-label">Age</label>
+            <input type="number" id="number" min="18" max="100" placeholder="18" />
+            <!-- For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label" -->
+            <!-- For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field -->
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Programming Knowledge</legend>
+          <!-- Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from -->
+          <div id="github-user-div">
+            <label for="github-user" id="github-user-label">Do you use Github?</label>
+            <select name="github-user" id="dropdown">
+              <option value="" disabled selected hidden>Select one</option>
+              <option value="github-yes">Yes</option>
+              <option value="github-no">No</option>
+            </select>
+          </div>
+
+          <div id="fcc-certified-div">
+            <label for="fcc-certified" id="fcc-certified-label">Do you have any freeCodeCamp Certification?</label>
+            <!-- Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute -->
+            <input type="radio" id="yes-certified" name="fcc-certified" value="yes-certified" />
+            <label for="yes-certified">Yes</label>
+            <input type="radio" id="not-certified" name="fcc-certified" value="not-certified" />
+            <label for="not-certified">No</label>
+          </div>
+
+          <!-- Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute -->
+          <div id="fcc-certification-list">
+            <label id="fcc-certification-list-label">If yes, which certifications do you have?</label>
+            <label for="responsive-web-design-new">
+              <input
+                type="checkbox"
+                id="responsive-web-design-new"
+                name="responsive-web-design-new"
+                value="yes-responsive-web-design-new-certification"
+              />
+              (NEW) Responsive Web Design
+            </label>
+            <label for="javascript-algorithms-and-data-structures">
+              <input
+                type="checkbox"
+                id="javascript-algorithms-and-data-structures"
+                name="javascript-algorithms-and-data-structures"
+                value="yes-javascript-algorithms-and-data-structures-certification"
+              />
+              JavaScript Algorithms and Data Structures
+            </label>
+            <label for="front-end-development-libraries">
+              <input
+                type="checkbox"
+                id="front-end-development-libraries"
+                name="front-end-development-libraries"
+                value="yes-front-end-development-libraries-certification"
+              />
+              Front End Development Libraries
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Inside the form element, you are presented with a textarea for additional comments -->
+        <fieldset>
+          <legend>Additional Information</legend>
+          <textarea name="additional-info" id="additional-info" rows="10" placeholder="Anything else you might want to add..."></textarea>
+        </fieldset>
+
+        <!-- Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
+        <button type="submit" id="submit">Submit Form</button>
+      </form>
+    </div>
+  </body>
+</html>
