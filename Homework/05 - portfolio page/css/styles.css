@@ -56,7 +56,7 @@ a {
 /* navbar */
 #navbar {
   background-color: var(--doge-black);
-  min-width: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -69,9 +69,14 @@ a {
   padding: 0.25rem 0;
   align-items: center;
 }
+#navbar a {
+  display: flex;
+  align-items: center;
+}
 #navbar img {
-  height: 2.5rem;
-  display: block;
+  height: 3rem;
+  top: 0;
+  left: 50%;
 }
 #navbar ul {
   justify-content: flex-start;
@@ -129,3 +134,5 @@ a {
 
 /* MEDIA QUERIES */
 /* Your portfolio should have at least one media query */
+@media (max-width: 700px) {
+}
