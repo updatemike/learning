@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Your product landing page should have a header element with a corresponding id="header" -->
+    <header id="header">
+      <div id="header-main">
+        <!-- Within the #header element, you can see a nav element with a corresponding id="nav-bar" -->
+        <nav id="nav-bar">
+          <ul>
+            <!-- You can see at least three clickable elements inside the nav element, each with the class nav-link -->
+            <!-- When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page -->
+            <li><a class="nav-link" href="#first-section">Good times</a></li>
+            <li>
+              <a class="nav-link" href="#first-section">
+                <!-- You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here) -->
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/287920/header.jpg?t=1654891610" alt="image" id="header-img" />
+              </a>
+            </li>
+            <li><a class="nav-link" href="#second-section">In the end</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="first-section">
+      <h2>We had some good times</h2>
+      <div id="good-times">
+        <iframe
+          id="video"
+          width="100%"
+          src="https://www.youtube-nocookie.com/embed/996SYCV7kDQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+
+        <iframe
+          width="100%"
+          src="https://www.youtube-nocookie.com/embed/nrHMwLw4yN4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+
+        <iframe
+          width="100%"
+          src="https://www.youtube-nocookie.com/embed/O4BrLQ9pMTE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+
+        <img src="https://cdn.discordapp.com/attachments/826598587961704479/831820240664657990/Screenshot_20210414-0048452.png" alt="" />
+        <img src="https://cdn.discordapp.com/attachments/826598587961704479/963540529432387594/unknown.png" alt="" />
+        <img src="https://cdn.discordapp.com/attachments/826598587961704479/966051700123262996/unknown.png" alt="" />
+      </div>
+    </section>
+
+    <section id="second-section">
+      <h2>But in the end it doesn't even matter</h2>
+      <!-- You can watch an embedded product video with id="video" -->
+      <div id="video-container">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube-nocookie.com/embed/WIFw2Sk4GsU?start=147"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Your landing page has a form element with a corresponding id="form" -->
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <!-- Within the form, there is an input field with id="email" where you can enter an email address -->
+        <!-- The #email input field should have placeholder text to let users know what the field is for -->
+        <!-- The #email input field uses HTML5 validation to confirm that the entered text is an email address -->
+        <input name="email" type="email" id="email" placeholder="youremail@mail.dom" />
+        <!-- Within the form, there is a submit input with a corresponding id="submit" -->
+        <!-- When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) -->
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- Your product landing page should have at least one media query -->
+    <!-- Your product landing page should utilize CSS flexbox at least once -->
+  </body>
+</html>
