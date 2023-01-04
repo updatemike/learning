@@ -97,16 +97,19 @@ function plusThree(num) {
 /* if statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses.
  These conditions are known as Boolean conditions and they may only be true or false. When the condition evaluates to true, the program executes the statement inside the curly braces.
  When the Boolean condition evaluates to false, the statement inside the curly braces will not execute. */
-function test(myCondition) {
+function ifConditional(myCondition) {
   if (myCondition) {
     return "It was true";
   }
   return "It was false";
 }
-test(true);
-test(false);
+ifConditional(true);
+ifConditional(false);
+/* When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. 
+ With an else statement, an alternate block of code can be executed. */
 
 //COMPARISON OPERATORS
+// ==, ===, !=, !==, >, <, >=, <=, &&, ||
 /* There are many comparison operators in JavaScript. All of these operators return a boolean true or false value.
 The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. */
 function equalityTest(myVal) {
@@ -117,6 +120,17 @@ function equalityTest(myVal) {
 }
 // Strict equality (===) is the counterpart to the equality operator (==). If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
 /* 1 == "1" => true
-1 == 2 => false
-1 === "1" => false
-1 === 1 => true */
+   1 == 2 => false
+   1 === "1" => false
+   1 === 1 => true */
+// typeof "3" => returns string, the data type of "3"
+//!= and !== are the equivalent of == and === respectively except they return true if the value is not equal following the same rules as their counterparts.
+/* 1 != 2 => true
+   1 != 1 => false
+   1 !== "1" => true
+   1 !== 1 => false */
+// 2 > 1 => true, 1 < 2 => true. These operators function the same way as == when it comes to data type conversion for comparison.
+/* Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+ The same effect could be achieved by nesting an if statement inside another if */
+// while && acts as a "and" condition, || acts as a "or" condition. The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+// If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
