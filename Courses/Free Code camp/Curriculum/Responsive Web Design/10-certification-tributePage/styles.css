@@ -1,6 +1,3 @@
-/* #image => max-width, height => responsive relative to width of parent
-    img => centered */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,7 +31,7 @@ body {
 #img-div {
   width: 80%;
   margin: 0 auto;
-  background-color: whitesmoke;
+  background-color: hsl(43, 67%, 66%);
   color: black;
   text-align: center;
 }

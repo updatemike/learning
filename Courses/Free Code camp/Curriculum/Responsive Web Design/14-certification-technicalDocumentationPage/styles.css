@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Helvetica, sans-serif;
   display: flex;
@@ -20,10 +24,11 @@ header {
 
 a {
   text-decoration: none;
-  color: #e3c26f;
-}
-a:hover {
   color: whitesmoke;
+}
+
+a:hover {
+  color: #e3c26f;
 }
 
 /* NAVBAR */
@@ -31,15 +36,9 @@ a:hover {
 
 #navbar {
   color: whitesmoke;
+  position: sticky;
   height: 100%;
   border-right: 2px solid rgba(188, 188, 188, 0.5);
-}
-
-#navbar a {
-  color: whitesmoke;
-}
-#navbar a:hover {
-  color: #e3c26f;
 }
 
 #navbar header {
@@ -56,34 +55,21 @@ a:hover {
 
 #main-doc {
   color: whitesmoke;
-  position: relative;
-  padding: min(1rem, 2vw);
-  overflow-y: scroll;
-  width: 100%;
-}
-
-#main-doc #top {
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: min(2rem, 2vw);
 }
 
 #main-doc section {
-  padding: min(2rem, 4vw) 0 min(2rem, 4vw) min(1rem, 2vw);
-  border-bottom: 2px solid rgba(188, 188, 188, 0.5);
+  margin-top: min(2rem, 4vw);
 }
-#main-doc section:first-of-type {
-  padding: 0 0 min(2rem, 4vw) min(1rem, 2vw);
-}
-#main-doc header {
-  margin-bottom: min(1rem, 2vw);
-}
+
 #main-doc article {
   margin-left: min(1rem, 2vw);
 }
 
-#main-doc .indent {
-  margin-left: min(2rem, 4vw);
+#main-doc .indent,
+#main-doc ul,
+#main-doc ol {
+  margin-left: 2rem;
 }
 
 #main-doc li {
@@ -96,15 +82,8 @@ code {
   margin-top: 1rem;
 }
 
-/* MEDIA QUERY */
-
 @media (max-width: 640px) {
   body {
     flex-direction: column;
-    justify-content: start;
-  }
-  #navbar {
-    height: auto;
-    border-bottom: 2px solid rgba(188, 188, 188, 0.5);
   }
 }
