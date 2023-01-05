@@ -69,6 +69,7 @@ const lastSandwich = sandwich.pop(); //lastSandwich = "bacon" => sandwich = ["pe
 // unshift() => like push() but for the first element
 
 //FUNCTIONS
+//Math.random(), Math.floor(), parseInt()
 // In JavaScript, we can divide up our code into reusable parts called functions. You can call a function by typing functionName().
 function functionName() {
   console.log("Hello World");
@@ -89,29 +90,56 @@ function plusThree(num) {
 // It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
 /* A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement,
  when you call it, the function processes the inner code but the returned value is undefined. Normally used to change global variables. */
+// When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+// Math.random() is a function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+// Math.floor() rounds the number down to its nearest whole number.
+function diceRoll(minRoll, maxRoll) {
+  return Math.floor(Math.random() * (maxRoll - minRoll + 1) + minRoll);
+}
+// The parseInt() function parses a string and returns an integer.
 
 //BOOLEANS
 // true or false
 
 //CONDITIONALS
+// if, else if, else, switch
 /* if statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses.
  These conditions are known as Boolean conditions and they may only be true or false. When the condition evaluates to true, the program executes the statement inside the curly braces.
  When the Boolean condition evaluates to false, the statement inside the curly braces will not execute. */
-function ifConditional(myCondition) {
-  if (myCondition) {
-    return "It was true";
-  }
-  return "It was false";
-}
-ifConditional(true);
-ifConditional(false);
 /* When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. 
  With an else statement, an alternate block of code can be executed. */
+function ifConditional(myCondition) {
+  if (myCondition == 1) {
+    return "It was 1";
+  } else if (myCondition == 2) {
+    return "It was 2";
+  } else {
+    return "It wasn't 1 or 2";
+  }
+}
+/* If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values.
+ Statements are executed from the first matched case value until a break is encountered. case values are tested with strict equality (===). 
+ The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed. */
+/* In a switch statement you may not be able to specify all possible values as case statements. Instead,
+ you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+ A default statement should be the last case. */
+// You can group switch cases if the output is the same like shown below.
+switch (switchExample) {
+  case "a":
+  case "c":
+    console.log("A or C");
+    break;
+  case "b":
+    console.log("B");
+    break;
+  default:
+    console.log("default statement");
+}
 
 //COMPARISON OPERATORS
 // ==, ===, !=, !==, >, <, >=, <=, &&, ||
 /* There are many comparison operators in JavaScript. All of these operators return a boolean true or false value.
-The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. */
+ The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. */
 function equalityTest(myVal) {
   if (myVal == 10) {
     return "Equal";
@@ -134,3 +162,75 @@ function equalityTest(myVal) {
  The same effect could be achieved by nesting an if statement inside another if */
 // while && acts as a "and" condition, || acts as a "or" condition. The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
 // If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+
+//OBJECTS
+/* Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+ Objects are useful for storing data in a structured way, and can represent real world objects, like a cat. */
+const catObject = {
+  name: "Whiskers",
+  legs: 4,
+  "number of tails": 1,
+  enemies: ["Water", "Dogs"],
+};
+//There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+// Ex: catObject.legs => 4, catObject["number of tails"] => 1, catObject.enemies[1] => "Dogs"
+//You can add new properties to existing JavaScript objects the same way you would modify them using either . or [].
+catObject.color = "white";
+// We can also delete properties from objects like this:
+delete catObject.color;
+//Note: Dot notation is only for the exact, literal name of the property. Dot notation cannot be used with variables holding the property name, use [] instead.
+//We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
+catObject.hasOwnProperty("name"); //this returns true because catObject has the property "name".
+
+//LOOPS
+// while, for, do...while
+// While loop runs while a specified condition is true and stops once that condition is no longer true.
+const loopArray = [];
+let loopExample = 0;
+function whileLoop() {
+  while (loopExample < 5) {
+    loopArray.push(loopExample);
+    loopExample++;
+  }
+  console.log(loopArray);
+}
+// For loops => for (a; b; c), where a is the initialization statement, b is the condition statement, and c is the final expression.
+function forLoop() {
+  for (let n = 0; n < 5; n++) {
+    loopArray.push(n);
+  }
+  console.log(loopArray);
+}
+// For loops don't have to iterate one at a time, or be additive. Example: n += 2 Example: n--
+// For loops are normally used to iterate through arrays.
+function iterateLoopArray() {
+  for (let n = 0; n < loopArray.length; n++) {
+    console.log(loopArray[n]);
+  }
+}
+// do...while => will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.
+function doWhileLoopArray() {
+  do {
+    loopArray.push(loopExample);
+    loopExample++;
+  } while (loopExample < 5);
+}
+// Recursion is the concept that a function can be expressed in terms of itself. Can replace loops:
+function recursiveLoopArray() {
+  if (loopExample >= 5) {
+    console.log(loopArray);
+  } else {
+    loopArray.push(loopExample);
+    loopExample++;
+    recursiveLoopArray(loopExample);
+  }
+}
+
+//CONDITIONAL OPERATOR
+/* The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+ The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false. 
+ You can also chain them together to check for multiple conditions.*/
+//Following example is the same as the ifConditional function from before in the CONDITIONALS section:
+function conditionalOperator(myCondition) {
+  return myCondition == 1 ? "It was 1" : myCondition == 2 ? "It was 2" : "It wasn't 1 or 2";
+}
