@@ -215,6 +215,8 @@ function doWhileLoopArray() {
     loopExample++;
   } while (loopExample < 5);
 }
+
+//RECURSION
 // Recursion is the concept that a function can be expressed in terms of itself. Can replace loops:
 function recursiveLoopArray() {
   if (loopExample >= 5) {
