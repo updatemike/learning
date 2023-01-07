@@ -61,12 +61,15 @@ sandwich[1] = "ham"; // sandwich = ["peanut butter", "ham", "bread"]; => jelly c
 teams[0][1] = 30; // teams = [["Bulls", 30], ["White Sox", 45]]; => 23 changed to 30
 
 //ARRAY FUNCTIONS
+// push, pop, shift, unshift, concat, prototype.slice
 // push() function => append data to end of array
 sandwich.push("bacon"); // sandwich = ["peanut butter", "ham", "bread", "bacon"]
 // pop() => remove last value of array and/or get it's value
 const lastSandwich = sandwich.pop(); //lastSandwich = "bacon" => sandwich = ["peanut butter", "ham", "bread"]
 // shift() => same as pop() but for the first element
 // unshift() => like push() but for the first element
+// concat() => concatenate
+// prototype.slice(2) => returns the array after array[2] => cuts the rest off
 
 //FUNCTIONS
 //Math.random(), Math.floor(), parseInt()
