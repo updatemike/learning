@@ -37,13 +37,15 @@ const restFunction = (...args) => "You have passed " + args.length + " arguments
 const spreadMaximum = (arr) => Math.max(...arr); // spreadMaximum([1,2,3,4,5]) => 5. Math.max(arr) would return NaN. Math.max() expects comma-separated arguments.
 
 //DESTRUCTURING OBJECTS
-const dUser = { dName: "John Doe", dAge: 33 };
-const { dName, dAge } = destructuringSyntaxUser; //same as const dName = dUser.name and const dAge = dSyntaxUser.dAge
+// destructuring => grabbing objects or arrays and turning them into smaller objects/variables.
+const dUser = { dName: "John Doe", dAge: 33, dDate };
+const { dName, dAge } = dUser; //same as const dName = dUser.name and const dAge = dSyntaxUser.dAge
 const { dName: nName, dAge: nAge } = dUser; //Can rename the variables. Same as const nName = dUser.dName
 const nUser = { "John Doe": { age: 34, email: "johndoeemail@email.email" } }; //nested object
 const {
   "John Doe": { age: mAge, email: mEmail },
 } = nUser; //destructuring nested objects
+const half = ({ dDate, dAge }) => (dDate + dAge) / 2; // destructuring an object in a function argument itself. half(dUser) will call on dDate and dAge from the object properties.
 
 //DESTRUCTURING ARRAYS
 // One key difference between destructuring an array and spreading and array (...arr) is that you can pick which value you want from the comma-separated list.
