@@ -111,11 +111,11 @@ class GetSetClass {
   constructor(argument) {
     this._variableExample = argument;
   }
-  //getter
+  // getter
   get getSetArgument() {
     this._variableExample;
   }
-  //setter
+  // setter
   set getSetArgument(updateGetSetArgument) {
     this._variableExample = updateGetSetArgument;
   }
@@ -127,8 +127,8 @@ getSetExample.getSetArgument = "red variable"; ////console.log(getSetExample.get
 //MODULE SCRIPT
 // <script type="module" src="filename.js"></script>;
 // Share code among JS files, this involved exporting parts and importing parts. You need to create a script in your HTML document with a type of module.
-//you use import and export for this.
-//named exports
+// you use import and export for this.
+// named exports
 export const exportExample1 = (x, y) => {
   return x + y;
 };
@@ -144,17 +144,63 @@ import * as myExportModule from "./export.js";
 /* The above import statement will create an object called myMathModule. This is just a variable name, you can name it anything. 
  The object will contain all of the exports from math_functions.js in it, so you can access the functions like you would any other object property. 
  Here's how you can use the add and subtract functions that were imported: */
-//myExportModule.exportExample1(1,2)
-//myExportModule.exportExample2(1,2)
-//export default => Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
+// myExportModule.exportExample1(1,2)
+// myExportModule.exportExample2(1,2)
+// export default => Usually you will use this syntax if only one value is being exported from a file. It is also used to create a fallback value for a file or module.
 export default function defaultFunctionName(x, y) {
   return x + y;
 }
-//you don't need a named function.  You can use an anonymous function.
+// you don't need a named function.  You can use an anonymous function.
 /* Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. 
  Additionally, you cannot use export default with var, let, or const */
-//Import a default Export
+// Import a default Export
 import defaultFunctionName from "./path_to_export.js";
 /* The syntax differs in one key place. 
  The imported value, add, is not surrounded by curly braces ({}). add here is simply a variable name for whatever the default export of the math_functions.js file is. 
  You can use any name here when importing a default. */
+
+//JS PROMISES
+/* Promise is a constructor function, so you need to use the new keyword to create one. It takes a function, as its argument, with two parameters - resolve and reject.
+ These are methods used to determine the outcome of the promise. The syntax looks like this: */
+const myPromiseExample1 = new Promise((resolve, reject) => {});
+// promises have 3 states: pending, fulfilled and rejected. The above promise is forever stuck in pending because we didn't add a way to complete the promise.
+// resolve is used when you want your promise to succeed, and reject is used when you want it to fail.
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+/* Promises are most useful when you have a process that takes an unknown amount of time in your code (i.e. something asynchronous), often a server request.
+ When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server.
+ This can be achieved by using the then method. The then method is executed immediately after your promise is fulfilled with resolve. Here’s an example: */
+const makeServerRequest2 = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+makeServerRequest2.then((result) => console.log(result));
+// catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called. error is the argument passed in to the reject method.
+const makeServerRequest3 = new Promise((resolve, reject) => {
+  // responseFromServer is set to false to represent an unsuccessful response from a server
+  let responseFromServer = false;
+  if (responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+makeServerRequest3.then((result) => {
+  console.log(result);
+});
+makeServerRequest3.catch((error) => {
+  console.log(error);
+});
